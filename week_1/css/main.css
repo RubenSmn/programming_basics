@@ -1,0 +1,79 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1 {
+    margin: 10px;
+}
+
+#canvas {
+    margin: 10px;
+    border: 1px solid #000000;
+}
+
+.container {
+    height: 80px;
+    margin: 10px;
+}
+
+#draw_button {
+    height: 40px;
+    padding: 6px;
+    margin: 0 8px;
+    border: none;
+    background-color: #333;
+    color: #FFF;
+    cursor: pointer;
+    float: left;
+}
+
+.box {
+    height: 40px;
+    float: left;
+}
+
+#change_line_color {
+    height: inherit;
+    padding: 6px;
+    margin: 0 4px;
+    border: none;
+    background-color: #333;
+    color: #FFF;
+}
+
+#change_fill_color {
+    height: inherit;
+    padding: 6px;
+    margin: 0 4px;
+    border: none;
+    background-color: #333;
+    color: #FFF;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*  */
