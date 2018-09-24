@@ -46,21 +46,21 @@ switch (grade) {
 
 
 // Opdracht 3
-if (conditions.purchasedBook === true && conditions.inTrain === true && conditions.job === 'teacher') {
+if (conditions.purchasedBook && conditions.inTrain && conditions.job === 'teacher') {
     console.log('Finally I can enjoy my book!');
-} else if (conditions.purchasedBook === false && conditions.inTrain === true && conditions.job === 'teacher') {
+} else if (!conditions.purchasedBook && conditions.inTrain && conditions.job === 'teacher') {
     console.log('You are a ' + conditions.job + ' but you haven\'t purchased a book');
-} else if (conditions.purchasedBook === true && conditions.inTrain === false && conditions.job === 'teacher') {
+} else if (conditions.purchasedBook && !conditions.inTrain && conditions.job === 'teacher') {
     console.log('You are a ' + conditions.job + ' but you\'re not in a train');
-} else if (conditions.purchasedBook === false && conditions.inTrain === false && conditions.job === 'teacher') {
+} else if (!conditions.purchasedBook && !conditions.inTrain && conditions.job === 'teacher') {
     console.log('You are just a ' + conditions.job);
-} else if (conditions.purchasedBook === true && conditions.inTrain === true && conditions.job !== 'teacher') {
+} else if (conditions.purchasedBook && conditions.inTrain && conditions.job !== 'teacher') {
     console.log('You are a ' + conditions.job + ', so what are you doing in a train with a book?');
-} else if (conditions.purchasedBook === false && conditions.inTrain === true && conditions.job !== 'teacher') {
+} else if (!conditions.purchasedBook && conditions.inTrain && conditions.job !== 'teacher') {
     console.log('You are a ' + conditions.job + ', so I\'m guessing your on your way to work');
-} else if (conditions.purchasedBook === true && conditions.inTrain === false && conditions.job !== 'teacher') {
+} else if (conditions.purchasedBook && !conditions.inTrain && conditions.job !== 'teacher') {
     console.log('You are a ' + conditions.job + ', so I you are just relaxing with your book');
-} else if (conditions.purchasedBook === false && conditions.inTrain === false && conditions.job !== 'teacher') {
+} else if (!conditions.purchasedBook && !conditions.inTrain && conditions.job !== 'teacher') {
     console.log('You are just a ' + conditions.job);
 }
 
