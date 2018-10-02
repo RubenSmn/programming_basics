@@ -4,7 +4,7 @@
 const runner = {
     name: 'Hendrik',
     lapRounds: [55.99,  63.00, 63.01, 54.01, 62.79, 52.88, 53.10, 54.12],
-}
+};
 
 
 // Defines all the teachers
@@ -23,7 +23,7 @@ const teachers = [
         name: 'Daan',
         profession: 'Teacher',
         brand: 'Arduino',
-        salary: 2764,
+        salary: 2564,
         hoursPerWeek: 26,
         salaryPerHour: function() {
             return this.salary / this.hoursPerWeek;
