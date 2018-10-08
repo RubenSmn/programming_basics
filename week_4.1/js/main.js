@@ -1,11 +1,21 @@
 // const lapRounds = [55.99,  63.00, 63.01, 54.01, 62.79, 52.88, 53.10, 54.12];
 
 // Const lapRounds to an object
-const runner = {
-    name: 'Hendrik',
-    lapRounds: [55.99,  63.00, 63.01, 54.01, 62.79, 52.88, 53.10, 54.12],
+const lapRounds = {
+    round1: 55.99,
+    round2: 63.00,
+    round3: 63.01,
+    round4: 54.01,
+    round5: 62.79,
+    round6: 52.88,
+    round7: 53.10,
+    round8: 54.12
 };
 
+
+const salaryPerHour = function() {
+    return this.salary / this.hoursPerWeek;
+}
 
 // Defines all the teachers
 const teachers = [
@@ -15,9 +25,7 @@ const teachers = [
         brand: 'Linux',
         salary: 2623,
         hoursPerWeek: 34,
-        salaryPerHour: function() {
-            return this.salary / this.hoursPerWeek;
-        }
+        salaryPerHour: salaryPerHour
     },
     {
         name: 'Daan',
@@ -25,9 +33,7 @@ const teachers = [
         brand: 'Arduino',
         salary: 2564,
         hoursPerWeek: 26,
-        salaryPerHour: function() {
-            return this.salary / this.hoursPerWeek;
-        }
+        salaryPerHour: salaryPerHour
     },
     {
         name: 'Rimmert',
@@ -35,9 +41,7 @@ const teachers = [
         brand: 'Apple',
         salary: 3256,
         hoursPerWeek: 41,
-        salaryPerHour: function() {
-            return this.salary / this.hoursPerWeek;
-        }
+        salaryPerHour: salaryPerHour
     }
 ];
 
