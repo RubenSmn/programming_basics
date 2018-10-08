@@ -1,15 +1,13 @@
 // Returns elements
 function getElm(selec) {
-    let x = document.querySelectorAll(selec);
-    return x;
+    return document.querySelectorAll(selec);
 }
 
-let all = getElm('li');
-console.log(all);
+// Creates element
+function createElm(type) {
+    return document.createElement(type);
+}
 
-let first = getElm('#groceryList')[0].children[0];
-console.log(first);
-first.style.color = '#CC3';
 
 
 // Opdracht 1
@@ -30,9 +28,9 @@ function calcAverage() {
 // Add average grade to table
 function showAverage() {
     let elm = getElm('table')[0].children[0];
-    let tr = document.createElement('TR');
-    let td1 = document.createElement('TD');
-    let td2 = document.createElement('TD');
+    let tr = createElm('TR');
+    let td1 = createElm('TD');
+    let td2 = createElm('TD');
     td1.innerText = 'Average grade';
     td2.innerText = calcAverage();
     tr.innerHTML += td1.outerHTML + td2.outerHTML;
@@ -57,7 +55,7 @@ function changeBackground() {
 // Opdracht 3
 // Creates a image element
 function createImageElement(src) {
-    let img = document.createElement('IMG');
+    let img = createElm('IMG');
     img.src = src;
     let body = getElm('body')[0];
     return body.appendChild(img);
