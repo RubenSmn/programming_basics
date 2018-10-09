@@ -9,7 +9,6 @@ let shoppingList = {
             total += parseFloat(dit);
         }
         this.totalPrice = Math.floor(total * 100) / 100;
-        return total;
     },
 }
 
@@ -39,7 +38,10 @@ window.onload = function() {
     getElm('#shoppingListForm button').addEventListener('click', getInputData);
 
     // Sets a example
-
+    let name = 'Banana';
+    let price = '5,00';
+    let item = newItem(name, price);
+    addToShoppingList(item);
 }
 
 
@@ -66,7 +68,7 @@ function infoMessage(msg, type) {
 
 
 // Gets input data from shopping list form
-function getInputData() {
+function getInputData(itm) {
     let input = getElm('#shoppingListForm input', 'm');
     let name = input[0].value;
     let price = input[1].value;
@@ -92,18 +94,12 @@ function getInputData() {
     input[0].value = '';
     input[1].value = '';
 
-    shoppingList.items.push(item);
-    shoppingList.amount++;
-    updateTotal();
-
-    addToShoppingList(item);
-
-    return infoMessage(`You have just added '${item.name}' to your shoppinglist!`, 'inf');
+    return addToShoppingList(item);
 }
 
 
 
-// Return a new item object
+// Returns a new item object
 function newItem(name, price) {
     let item = {
         name: name,
@@ -114,8 +110,12 @@ function newItem(name, price) {
 
 
 
-// Adds new item to UI shoppinglist
+// Adds new item to shoppinglist
 function addToShoppingList(item) {
+    shoppingList.items.push(item);
+    shoppingList.amount++;
+    updateTotal();
+
     const add = '<span>' + item.name + '</span><span>€' + item.price + '</span><span>Remove</span>';
     const li = newElm('LI');
     li.innerHTML = add;
@@ -123,7 +123,8 @@ function addToShoppingList(item) {
     li.childNodes[2].addEventListener('click', removeFromShoppingList);
 
     getElm('#shoppingList').appendChild(li);
-    console.log(li);
+
+    return infoMessage(`You have just added '${item.name}' to your shoppinglist!`, 'inf');
 }
 
 
