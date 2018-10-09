@@ -1,0 +1,102 @@
+*
+    box-sizing: border-box
+    margin: 0
+    padding: 0
+    font-family: monospace
+    list-style: none
+    outline: none
+
+
+body
+    padding: 50px
+    background-color: #666
+
+
+.app
+    display: grid
+    grid-template-columns: auto auto auto
+    grid-gap: 8px 0
+
+    form
+        display: grid
+        grid-template-columns: 3fr 1fr 1fr
+        grid-gap: 8px
+        grid-column-start: 1
+        grid-column-end: 4
+
+        input
+            height: 40px
+            color: #FFF
+            background: none
+            border: 2px dashed #CC3
+            padding: 12px
+            text-align: center
+
+            &:first-child
+                text-align: left
+
+            &::placeholder
+                color: #FFF
+
+        button
+            height: 40px
+            border: none
+            background-color: #CC3
+
+            &:hover
+                cursor: pointer
+                font-weight: bold
+
+    .informationMessage
+        height: 30px
+        text-align: center
+        font-size: 1.05em
+        color: #FFF
+        padding: 8px
+        text-decoration: underline
+        grid-column-start: 1
+        grid-column-end: 4
+
+    .shoppingList
+        grid-column-start: 1
+        grid-column-end: 4
+
+        li
+            height: 40px
+            line-height: 40px
+            margin: 6px 0
+            color: #000
+            display: grid
+            grid-template-columns: 3fr 1fr 1fr
+            grid-gap: 8px
+
+            &:first-child
+                font-size: 1.1em
+                font-weight: bold
+
+            span
+                background-color: #CC3
+                text-align: center
+                box-shadow: 0 2px 2px rgba(0, 0, 0, 0.4)
+                transition: font-weight 300ms ease-out
+
+                &:last-child:hover
+                    cursor: pointer
+                    font-weight: bold
+
+    .shoppingListTotal
+        height: 40px
+        line-height: 40px
+        margin: 6px 0
+        color: #000
+        font-weight: bold
+        display: grid
+        grid-template-columns: repeat(4, 1fr)
+        grid-gap: 8px
+        grid-column-start: 1
+        grid-column-end: 4
+
+        li
+            background-color: #CC3
+            text-align: center
+            box-shadow: 0 2px 2px rgba(0, 0, 0, 0.4)

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>Shopping List</title>
+        <link rel="stylesheet" href="./css/main.css">
+    </head>
+    <body>
+
+        <div class="app">
+
+            <form id="shoppingListForm">
+                <input type="text" placeholder="Name: Banana">
+                <input type="text" placeholder="Price: 5,00">
+                <button type="button">Add</button>
+            </form>
+
+            <div class="informationMessage" id="informationMessage">
+                Add new things to your shoppinglist!
+            </div>
+
+            <ul class="shoppingList" id="shoppingList">
+                <li>
+                    <span>Name</span>
+                    <span>Price</span>
+                    <!-- <span></span> -->
+                </li>
+            </ul>
+
+            <ul class="shoppingListTotal" id="shoppingListTotal">
+                <li>Total items:</li>
+                <li>0</li>
+                <li>Total price:</li>
+                <li>€0,00</li>
+            </ul>
+
+        </div>
+
+        <script src="./js/main.js" charset="utf-8"></script>
+    </body>
+</html>
