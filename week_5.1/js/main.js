@@ -68,7 +68,7 @@ function infoMessage(msg, type) {
 
 
 // Gets input data from shopping list form
-function getInputData(itm) {
+function getInputData() {
     let input = getElm('#shoppingListForm input', 'm');
     let name = input[0].value;
     let price = input[1].value;
