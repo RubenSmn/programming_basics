@@ -116,7 +116,7 @@ function addToShoppingList(item) {
     shoppingList.amount++;
     updateTotal();
 
-    const add = '<span>' + item.name + '</span><span>€' + item.price + '</span><span>Remove</span>';
+    const add = `<span>${item.name}</span><span>€${item.price}</span><span>Remove</span>`;
     const li = newElm('LI');
     li.innerHTML = add;
 
